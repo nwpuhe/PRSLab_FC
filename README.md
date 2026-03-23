@@ -41,7 +41,23 @@ sudo udevadm trigger
 
 ---
 
-## 3. 工程配置 (`platformio.ini`)
+## 3. 编译安装最新版 OpenOCD (支持最新 MCU)
+```bash
+sudo apt update
+sudo apt install -y make libtool pkg-config autoconf automake texinfo libusb-1.0-0-dev
+
+git clone --recursive https://github.com/openocd-org/openocd.git
+cd openocd
+./bootstrap
+./configure --enable-cmsis-dap --enable-stlink --enable-jlink --enable-ftdi
+make -j$(nproc)
+sudo make install
+```
+在终端输入 openocd --version，确保版本号为最新（通常是 0.12.0+ 或 0.13.0-rc）。
+
+---
+
+## 4. 工程配置 (`platformio.ini`)
 
 环境打通后，需要强制指定项目使用 DAPLink 进行烧录和调试。打开项目根目录下的 `platformio.ini` 文件，添加以下配置：
 
@@ -58,7 +74,7 @@ debug_tool = cmsis-dap
 
 ---
 
-## 4. PIO 工程目录规范
+## 5. PIO 工程目录规范
 
 为了保证代码的可维护性，请严格按照以下职能划分存放代码：
 
@@ -77,7 +93,7 @@ debug_tool = cmsis-dap
 
 ---
 
-## 5. 编译与烧录验证
+## 6. 编译与烧录验证
 
 代码编写完成后，连接好 DAPLink 与目标板：
 1. 点击 VS Code 底部蓝色状态栏的 **`✓` (Build)** 图标进行编译。
