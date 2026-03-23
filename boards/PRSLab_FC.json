@@ -2,6 +2,8 @@
   "build": {
     "core": "stm32",
     "cpu": "cortex-m7",
+    "fpu": "fpv5-d16",
+    "float_abi": "hard",
     "extra_flags": "-DSTM32H753xx",
     "f_cpu": "480000000L",
     "mcu": "stm32h753iik6",
