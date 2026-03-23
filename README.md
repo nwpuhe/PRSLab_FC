@@ -1,5 +1,5 @@
 
-# 🛠️ Ubuntu + VS Code + PlatformIO 嵌入式开发环境搭建指南
+# 🛠️ Ubuntu + VS Code + PlatformIO 嵌入式开发环境搭建
 
 本指南旨在帮助开发者在 Ubuntu 环境下，快速搭建基于 VS Code 和 PlatformIO (PIO) 的嵌入式开发环境，彻底解决 DAPLink 等硬件调试器的 USB 读写权限问题，并规范化工程的目录结构。
 
@@ -35,7 +35,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-**第四步：物理拔插与权限挂载（⚠️ 极其关键）**
+**第四步：物理拔插与权限挂载**
 1. **必须**将插在电脑上的 DAPLink **拔下并重新插上**，让系统对该设备应用全新规则。
 2. **必须注销当前 Ubuntu 用户并重新登录**（或直接重启电脑）。因为用户组（Group）权限的变更只有在用户重新登录后才会真正生效。
 
