@@ -1,0 +1,32 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m7",
+    "extra_flags": "-DSTM32H753xx",
+    "f_cpu": "480000000L",
+    "mcu": "stm32h753iik6",
+    "product_line": "STM32H753xx",
+    "variant": "STM32H7xx"
+  },
+  "debug": {
+    "jlink_device": "STM32H753II",
+    "openocd_target": "stm32h7x",
+    "svd_path": "STM32H753.svd"
+  },
+  "frameworks": [
+    "stm32cube"
+  ],
+  "name": "PRSLab Flight Controller (H753)",
+  "upload": {
+    "maximum_ram_size": 1048576,
+    "maximum_size": 2097152,
+    "protocol": "cmsis-dap",
+    "protocols": [
+      "cmsis-dap",
+      "stlink",
+      "jlink"
+    ]
+  },
+  "url": "https://github.com/nwpuhe/PRSLab_FC",
+  "vendor": "PRSLab"
+}

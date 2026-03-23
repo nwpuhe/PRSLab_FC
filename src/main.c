@@ -36,20 +36,20 @@ int main(void) {
     // 3. 超级循环：10步色彩秀
     while (1) {
         // --- 7种基础物理混色 ---
-        Set_RGB_Color(1, 0, 0); HAL_Delay(500); // 1. 纯红
-        Set_RGB_Color(0, 1, 0); HAL_Delay(500); // 2. 纯绿
-        Set_RGB_Color(0, 0, 1); HAL_Delay(500); // 3. 纯蓝
+        Set_RGB_Color(1, 0, 0); HAL_Delay(1000); // 1. 纯红
+        Set_RGB_Color(0, 1, 0); HAL_Delay(1000); // 2. 纯绿
+        Set_RGB_Color(0, 0, 1); HAL_Delay(1000); // 3. 纯蓝
         
-        Set_RGB_Color(1, 1, 0); HAL_Delay(500); // 4. 黄色 (红+绿)
-        Set_RGB_Color(0, 1, 1); HAL_Delay(500); // 5. 青色 (绿+蓝)
-        Set_RGB_Color(1, 0, 1); HAL_Delay(500); // 6. 洋红 (红+蓝)
+        Set_RGB_Color(1, 1, 0); HAL_Delay(1000); // 4. 黄色 (红+绿)
+        Set_RGB_Color(0, 1, 1); HAL_Delay(1000); // 5. 青色 (绿+蓝)
+        Set_RGB_Color(1, 0, 1); HAL_Delay(1000); // 6. 洋红 (红+蓝)
         
-        Set_RGB_Color(1, 1, 1); HAL_Delay(500); // 7. 白色 (红+绿+蓝全开)
+        Set_RGB_Color(1, 1, 1); HAL_Delay(1000); // 7. 白色 (红+绿+蓝全开)
         
         // --- 特殊状态 ---
-        Set_RGB_Color(0, 0, 0); HAL_Delay(500); // 8. 熄灭 (黑)
+        Set_RGB_Color(0, 0, 0); HAL_Delay(1000); // 8. 熄灭 (黑)
         
-        Set_RGB_Color(1, 0, 0); HAL_Delay(500); // 9. 警灯：红
-        Set_RGB_Color(0, 0, 1); HAL_Delay(500); // 10. 警灯：蓝
+        Set_RGB_Color(1, 0, 0); HAL_Delay(1000); // 9. 警灯：红
+        Set_RGB_Color(0, 0, 1); HAL_Delay(1000); // 10. 警灯：蓝
     }
 }
